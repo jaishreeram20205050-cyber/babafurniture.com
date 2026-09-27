@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Baba Carpenter | Admin Login</title>
+
+    <link rel="stylesheet" href="css/admin-login.css">
+</head>
+
+<body>
+
+    <div class="admin-page">
+
+        <!-- LEFT PANEL -->
+        <div class="admin-left">
+
+            <div class="left-overlay">
+
+                <!-- LOGO -->
+                <div class="brand">
+
+                    <div class="brand-icon">
+                        ⌂
+                    </div>
+
+                    <div>
+                        <h2>
+                            Baba<span>Carpenter</span>
+                        </h2>
+
+                        <p>
+                            ADMIN PANEL
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- MAIN CONTENT -->
+                <div class="left-content">
+
+                    <div class="admin-badge">
+                        🛡️ ADMINISTRATOR
+                    </div>
+
+                    <h1>
+                        Manage Your
+                        <br>
+                        Business <span>Smarter.</span>
+                    </h1>
+
+                    <p>
+                        Manage customers, bookings, services
+                        and your complete HomeWorkz business
+                        from one secure dashboard.
+                    </p>
+
+
+                    <!-- FEATURES -->
+
+                    <div class="features">
+
+                        <div class="feature">
+                            <div class="feature-icon">👥</div>
+
+                            <div>
+                                <strong>Customers</strong>
+                                <small>Manage customers</small>
+                            </div>
+                        </div>
+
+
+                        <div class="feature">
+                            <div class="feature-icon">📋</div>
+
+                            <div>
+                                <strong>Bookings</strong>
+                                <small>Track all bookings</small>
+                            </div>
+                        </div>
+
+
+                        <div class="feature">
+                            <div class="feature-icon">📊</div>
+
+                            <div>
+                                <strong>Analytics</strong>
+                                <small>Business overview</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="copyright">
+                    © 2026 Baba Carpenter. Admin Portal.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT LOGIN PANEL -->
+
+        <div class="admin-right">
+
+            <div class="login-card">
+
+
+                <!-- MOBILE LOGO -->
+
+                <div class="mobile-brand">
+
+                    <div class="brand-icon">
+                        ⌂
+                    </div>
+
+                    <div>
+                        <h2>
+                            Baba<span>Carpenter</span>
+                        </h2>
+
+                        <p>ADMIN PANEL</p>
+                    </div>
+
+                </div>
+
+
+                <!-- ICON -->
+
+                <div class="login-icon">
+                    🛡️
+                </div>
+
+
+                <!-- HEADING -->
+
+                <div class="heading">
+
+                    <h1>
+                        Admin Login
+                    </h1>
+
+                    <p>
+                        Sign in to access your dashboard
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form id="adminLoginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="adminEmail">
+                            Admin Email
+                        </label>
+
+                        <div class="input-box">
+
+                            <span class="input-icon">
+                                ✉️
+                            </span>
+
+                            <input
+                                type="email"
+                                id="adminEmail"
+                                placeholder="Enter admin email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <div class="password-top">
+
+                            <label for="adminPassword">
+                                Password
+                            </label>
+
+                            <a
+                                href="#"
+                                id="forgotPassword"
+                            >
+                                Forgot Password?
+                            </a>
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="adminPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="toggle-password"
+                            >
+                                👁️
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="remember">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+
+                        <span>
+                            Login to Dashboard
+                        </span>
+
+                        <b>→</b>
+
+                    </button>
+
+
+                    <!-- SECURITY -->
+
+                    <div class="security-box">
+
+                        <span>🔐</span>
+
+                        <div>
+                            <strong>Secure Admin Access</strong>
+
+                            <p>
+                                Only authorized administrators
+                                can access this panel.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- BACK TO WEBSITE -->
+
+                    <a
+                        href="index.html"
+                        class="back-home"
+                    >
+                        ← Back to Website
+                    </a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOADING -->
+
+    <div
+        class="loading"
+        id="loading"
+    >
+
+        <div class="loader"></div>
+
+        <p>
+            Signing in...
+        </p>
+
+    </div>
+
+
+    <script type="module"
+    src="js/admin-login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baba Carpenter</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body> 
+    <!-- ================= GET STARTED POPUP ================= -->
+
+<div id="getStartedPopup" class="get-started-overlay">
+
+    <div class="get-started-box">
+
+        <!-- Close Button -->
+        <button class="get-started-close" onclick="closeGetStarted()">
+            ×
+        </button>
+
+        <!-- Icon -->
+        <div class="rocket-icon">
+            🚀
+        </div>
+
+        <h2>Get Started Now</h2>
+
+        <p class="get-started-subtitle">
+            Tell us about your requirement and get
+            <span>instant price estimate</span>
+        </p>
+
+
+        <!-- Select Service -->
+
+        <div class="form-field">
+            <span class="field-icon">▦</span>
+
+            <select id="startService">
+                <option value="">Select Service</option>
+                <option value="Furniture Work">Furniture Work</option>
+                <option value="False Ceiling">False Ceiling</option>
+                <option value="PVC Panel">PVC Panel</option>
+                <option value="Window Fitting">Window Fitting</option>
+                <option value="Door Fitting">Door Fitting</option>
+                <option value="Painting">Painting</option>
+                <option value="Electrical Work">Electrical Work</option>
+                <option value="Plumbing">Plumbing</option>
+            </select>
+
+            <span class="dropdown-arrow">⌄</span>
+        </div>
+
+
+        <!-- Select Room -->
+
+        <div class="form-field">
+
+            <span class="field-icon">⌂</span>
+
+            <select id="startRoom">
+
+                <option value="">Select Room / Area</option>
+
+                <option value="Bedroom">Bedroom</option>
+
+                <option value="Living Room">Living Room</option>
+
+                <option value="Kitchen">Kitchen</option>
+
+                <option value="Bathroom">Bathroom</option>
+
+                <option value="Dining Room">Dining Room</option>
+
+                <option value="Office">Office</option>
+
+                <option value="Other">Other</option>
+
+            </select>
+
+            <span class="dropdown-arrow">⌄</span>
+
+        </div>
+
+
+        <!-- Size -->
+
+        <div class="form-field">
+
+            <span class="field-icon">▣</span>
+
+            <input
+                type="text"
+                id="Name"
+                placeholder="Enter Your Name"
+            >
+
+
+        </div>
+
+
+        <!-- Location -->
+
+        <div class="form-field">
+
+            <span class="field-icon">⌖</span>
+
+            <input
+                type="text"
+                id="startLocation"
+                placeholder="Enter Your Location"
+            >
+
+        </div>
+
+
+        <!-- Date -->
+
+        <div class="form-field">
+
+            <span class="field-icon">▣</span>
+
+            <input
+                type="date"
+                id="Date Prefferance"
+            
+            >
+
+        </div>
+
+
+        <!-- Notes -->
+
+        <div class="form-field notes-field">
+
+            <span class="field-icon">▤</span>
+
+            <input
+                type="text"
+                id="startNotes"
+                placeholder="Additional Notes (Optional)"
+            >
+
+        </div>
+
+
+        <!-- Estimate Button -->
+
+        <button
+            class="estimate-btn"
+            onclick="getInstantEstimate()"
+        >
+            Get Instant Estimate
+            <span>→</span>
+        </button>
+
+
+        <!-- Security -->
+
+        <div class="secure-text">
+            🛡️ 100% Secure&nbsp; • &nbsp;No Hidden Charges
+        </div>
+
+    </div>
+
+</div>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<header class="navbar">
+
+    <div class="logo">
+        <img src="image/homeworkz.jpeg.jpeg" alt="HomeWorkz">
+        <div>
+            <h2>Baba<span>Carpenter</span></h2>
+            <p>Your Home, Our Responsibility</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services </a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About Us</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <button class="login-btn" onclick="window.location.href='admin-login.html'">
+        👤Admin Login
+        
+    </button>
+    
+
+</header>
+<section class="hero">
+
+    <div class="hero-left">
+
+        <h1>
+            All Home & Interior <br>
+            Services at One Place
+        </h1>
+
+        <p>
+            From furniture work to false ceiling, PVC, window fitting
+            and more — Get instant price estimate and book trusted
+            professionals online.
+        </p>
+
+        <div class="features">
+
+            <div class="feature-box">
+                💰
+                <h4>Instant</h4>
+                <span>Price Estimate</span>
+            </div>
+
+            <div class="feature-box">
+                🛡️
+                <h4>Verified</h4>
+                <span>Professionals</span>
+            </div>
+
+            <div class="feature-box">
+                📅
+                <h4>On-time</h4>
+                <span>Completion</span>
+            </div>
+
+        </div>
+
+        <div class="hero-buttons">
+
+            <button class="start-btn"onclick="openGetStarted()">
+                Get Started Now →
+            </button>
+
+            <button class="how-it-works-btn"
+            onclick="openHowItWorks()">
+                ▶ How It Works
+            </button>
+
+        </div>
+
+    </div>
+     
+    <div class="estimate-card">
+
+        <h2>Book Now</h2>
+
+        <select id="heroService">
+            <option value="">Select Service</option>
+            <option value="furniture work">Furniture Work</option>
+            <option value="false ceilling">False Ceilling</option>
+            <option value="pvc panel">PVC Panel</option>
+            <option value="window fitting">Window Fitting</option>
+            <option value="door fitting">Door Fitting</option>
+        </select>
+
+        <select id="heroRoom">
+            <option>Select Room / Area</option>
+            <option>Bedroom</option>
+            <option>Living Room</option>
+            <option>Kitchen</option>
+            <option>Bathroom</option>
+        </select>
+        <input
+    type="text"
+    id="heroLocation"
+    placeholder="📍 Enter Your Location">
+
+       
+
+        <button onclick="window.location.href='login.html'">
+            🧮 Book Now
+        </button>
+
+    </div>
+
+</div></section>
+<!-- ================= OUR SERVICES ================= -->
+
+<section class="services-section" id="services">
+
+    <h2 class="section-title">⸻ Our Services ⸻</h2>
+    <p class="section-subtitle">
+        Choose from a wide range of home improvement services
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service-card" onclick="window.location.href='furniture.html'">
+            <img src="image/furniture.jpeg.jpeg">
+            <h3>Furniture Work</h3>
+            <p>Bed, Wardrobe, Modular Kitchen & more</p>
+            <button
+            onclick="event.stopPropagation();window.location.href='furniture.html'">Get Estimate</button>
+        </div>
+
+        <div class="service-card" onclick="window.location.href='false.html'">
+            <img src="image/false img/pvc false ceiling.jpg">
+            <h3>False Ceiling</h3>
+            <p>Gypsum, POP, Tray, PVC Ceiling & more</p>
+            <button
+            onclick="event.stopPropagation();window.location.href='false.html'">Get Estimate</button>
+        </div>
+
+        <div class="service-card" onclick="window.location.href='pvcpanel.html'">
+            <img src="image/pvc-panel.jpeg.jpeg">
+            <h3>PVC Panel</h3>
+            <p>Wall & Ceiling PVC Paneling</p>
+            <button 
+            onclick="event.stopPropagation();window.location.href='pvcpanel.html'">Get Estimate
+             </button>
+        </div>
+
+        <div class="service-card" onclick="window.location.href='window.html'">
+            <img src="image/window.jpeg.jpeg">
+            <h3>Window Fitting</h3>
+            <p>Aluminium, UPVC Window Fitting</p>
+            <button
+            onclick="event.stopPropagation();window.location.href='window.html'">Get Estimate
+        </button>
+        
+        </div>
+
+        <div class="service-card" onclick="window.location.href='door.html'">
+            <img src="image/door-fitting.jpeg.jpeg">
+            <h3>Door Fitting</h3>
+            <p>Main Door, Room Door, Sliding Door & more</p>
+            <button
+            onclick="event.stopPropagation();window.location.href='door.html'">Get Estimate</button>
+        </div>
+
+        <div class="service-card" onclick="openService('more')">
+            <img src="image/more-service.jpeg.jpeg">
+            <h3>More Services</h3>
+            <p>Painting, Tiles, Electrical, Plumbing & more</p>
+            <button>Explore All</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="work-section" id="how">
+
+    <h2 class="section-title">⸻ How It Works ⸻</h2>
+
+    <div class="work-grid">
+
+        <div class="work-card">
+            <img src="image/select-service.jpeg.jpeg">
+            <span>1</span>
+            <h3>Select Service</h3>
+            <p>Choose the service you need for your home.</p>
+        </div>
+
+        <div class="work-card">
+            <img src="image/fill-details.jpeg.jpeg">
+            <span>2</span>
+            <h3>Fill Details</h3>
+            <p>Enter your room size, preferences & materials.</p>
+        </div>
+
+        <div class="work-card">
+            <img src="image/get-estimate.jpeg.jpeg">
+            <span>3</span>
+            <h3>Get Estimate</h3>
+            <p>Get instant price estimate and working days.</p>
+        </div>
+
+        <div class="work-card">
+            <img src="image/book-service.jpeg.jpeg">
+            <span>4</span>
+            <h3>Book Service</h3>
+            <p>Choose your preferred date and book online.</p>
+        </div>
+
+        <div class="work-card">
+            <img src="image/work-complited.jpeg.jpeg">
+            <span>5</span>
+            <h3>Work Completed</h3>
+            <p>Our expert will complete the work on time.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= STATS ================= -->
+<section class="stats-section">
+
+    <div class="stat-box">
+        <img src="image/happy customr.jpeg" alt="">
+        <div>
+            <h2>5000+</h2>
+            <p>Happy Customers</p>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="stat-box">
+        <img src="image/verify.jpeg" alt="">
+        <div>
+            <h2>1000+</h2>
+            <p>Verified Professionals</p>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="stat-box">
+        <img src="image/project.jpeg" alt="">
+        <div>
+            <h2>8000+</h2>
+            <p>Projects Completed</p>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="stat-box">
+        <img src="image/on time.jpeg" alt="">
+        <div>
+            <h2>98%</h2>
+            <p>On-time Delivery</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="reviews">
+
+<h2>⭐ What Our Customers Say</h2>
+
+<div class="review-slider">
+
+<div class="review-card active">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>Rahul Sharma</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>Very professional team. Work completed on time.</p>
+<span>Lucknow</span>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+<h3>Neha Verma</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>PVC Panel fitting was excellent. Highly recommended.</p>
+<span>Kanpur</span>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/men/56.jpg">
+<h3>Amit Singh</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p>Best home service website with affordable pricing.</p>
+<span>Varanasi</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer">
+
+<div>
+<h2>🏠 Baba Carpenter</h2>
+<p>Your Home, Our Responsibility</p>
+<a>We make home improvement easy by connecting you with trusted professionals and delivering quality work</a>
+
+</div>
+
+
+<div>
+<h3>Quick Links</h3>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Projects</a>
+<a href="#">Contact Us</a>
+<a herf="#">How it Works</a>
+<a herf="#">About Us</a>
+</div>
+
+<div>
+<h3>Services</h3>
+<a href="#">Furniture</a>
+<a href="#">False Ceiling</a>
+<a href="#">PVC Panel</a>
+<a href="#">Window Fitting</a>
+<a href="#">Door Fitting</a>
+<a href="#">Welding</a>
+<a herf="#">More Services</a>
+</div>
+<div>
+    <h3>Support</h3>
+    <a href="#">Help Center</a>
+    <a href="#">Terms & Condition</a>
+    <a href="#">Privacy Policy</a>
+    <a herf="#">Refund Policy</a>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>📞 +91 9920931142</p>
+<p>✉ support@homeworkz.com</p>
+<p>📍 Mulund,Maharastra,India</p>
+<a href="https://wa.me/9920931142" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    Chat on WhatsApp
+</a>
+</div>
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</div>
+<hr class="footer-line">
+
+<p class="copyright">
+© 2026 Baba Carpenter. All Rights Reserved.
+</p>
+
+</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furniture Services - Baba Carpenter</title>
+
+    <link rel="stylesheet" href="css/furniture.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="furniture-header">
+
+    <div class="back-area">
+        <button onclick="window.location.href='index.html'">
+            ← Back
+        </button>
+    </div>
+
+    <div class="page-title">
+        <h1>Furniture Services</h1>
+        <p>Choose the furniture work you need</p>
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="furniture-page">
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <span>🔍</span>
+
+        <input
+            type="text"
+            id="searchFurniture"
+            placeholder="Search for a furniture service..."
+            onkeyup="searchFurniture()"
+        >
+
+    </div>
+
+
+    <!-- ================= FURNITURE GRID ================= -->
+
+    <div class="furniture-grid" id="furnitureGrid">
+
+
+        <!-- BED -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/bed making.jpg"
+                alt="Bed Making">
+                
+            </div>
+
+            <h2>Bed Making</h2>
+
+            <p>
+                Single, Double, Queen & King Size Bed
+            </p>
+
+            <button onclick="openFurnitureBooking('Bed Making')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- WARDROBE -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/wardrove.jpg"
+                alt="Wardrobe">
+            </div>
+
+            <h2>Wardrobe</h2>
+
+            <p>
+                Sliding, Hinged & Modular Wardrobe
+            </p>
+
+            <button onclick="openFurnitureBooking('Wardrobe')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- MODULAR KITCHEN -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/modular kitchen.jpg"
+                alt="Modular Kitchen">
+            </div>
+
+            <h2>Modular Kitchen</h2>
+
+            <p>
+                L-Shape, U-Shape, Straight & Island Kitchen
+            </p>
+
+            <button onclick="openFurnitureBooking('Modular Kitchen')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- TV UNIT -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/tv unit.jpg"
+                alt="Tv Unit">
+            </div>
+
+            <h2>TV Unit</h2>
+
+            <p>
+                Wall Mounted, Floor Unit & TV Cabinet
+            </p>
+
+            <button onclick="openFurnitureBooking('TV Unit')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- SOFA -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/sofa set.jpg"
+                alt="Sofa">
+            </div>
+
+            <h2>Sofa Work</h2>
+
+            <p>
+                Sofa Making, Repair, Foam & Fabric Change
+            </p>
+
+            <button onclick="openFurnitureBooking('Sofa Work')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- DINING -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+            <img src="image/ferniture img/dinning table.jpg"
+            alt="Dinning Table">
+            </div>
+
+            <h2>Dining Table</h2>
+
+            <p>
+                4, 6, 8 Seater & Custom Dining Table
+            </p>
+
+            <button onclick="openFurnitureBooking('Dining Table')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- STUDY TABLE -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+            <img src="image/ferniture img/study table.jpg"
+            alt="Study Table">
+            </div>
+
+            <h2>Study Table</h2>
+
+            <p>
+                Study Table with Storage & Wall Mounted
+            </p>
+
+            <button onclick="openFurnitureBooking('Study Table')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- SHOE RACK -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/shoe rack.jpg"
+                atl="Shoe Rack">
+            </div>
+
+            <h2>Shoe Rack</h2>
+
+            <p>
+                Open, Closed, Wall Mounted & Seating Rack
+            </p>
+
+            <button onclick="openFurnitureBooking('Shoe Rack')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- DRESSING -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/Dressing table.jpg"
+                alt="Dressing Room">
+            </div>
+
+            <h2>Dressing Table</h2>
+
+            <p>
+                Designer Dressing Unit with Storage
+            </p>
+
+            <button onclick="openFurnitureBooking('Dressing Table')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- WOODEN DOOR -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                <img src="image/ferniture img/wooden door.jpg"
+                atl="Wooden Door">
+            </div>
+
+            <h2>Wooden Door</h2>
+
+            <p>
+                Main Door, Room Door & Designer Door
+            </p>
+
+            <button onclick="openFurnitureBooking('Wooden Door')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- PARTITION -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+            <img src="image/ferniture img/wooden partition.jpg"
+            alt="Wooden Partition">
+            </div>
+
+            <h2>Wooden Partition</h2>
+
+            <p>
+                Room, TV & Decorative Wooden Partition
+            </p>
+
+            <button onclick="openFurnitureBooking('Wooden Partition')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- CABINET -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+            <img src="image/ferniture img/storage unit.jpg"
+            alt="Cabinate">
+            </div>
+
+            <h2>Storage & Cabinet</h2>
+
+            <p>
+                Wall Cabinet, Bookshelf & Display Cabinet
+            </p>
+
+            <button onclick="openFurnitureBooking('storage cabinate')">
+                Book Now
+            </button>
+
+        </div>
+
+
+        <!-- OFFICE -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+            <img src="image/ferniture img/office work.jpg"
+            alt="Office">
+            </div>
+
+            <h2>Office Furniture</h2>
+
+            <p>
+                Office Table, Workstation & File Cabinet
+            </p>
+
+            <button onclick="openFurnitureBooking('Office Furniture')">
+                Book Now
+            </button>
+
+        </div>
+        <!--Pooja Unit-->
+        <div class="furniture-card">
+            <div class="service-icon">
+                <img src="image/ferniture img/pooja unit.jpg"
+                alt="Pooja Unit">
+            </div>
+            <h2>Pooja Unit</h2>
+            <p>
+                Base Storage, Backdrop & layout Planning
+            </p>
+            <button onclick="openFurnitureBooking('pooja unit')">
+                Book Now
+            </button>
+        </div>
+
+        <!-- Wall Shelf-->
+         <div class="furniture-card">
+            <div class="service-icon">
+                <img src="image/ferniture img/wall self.jpg"
+                alt="Wall Shelf">
+            </div>
+            <h2>Wall Shelf</h2>
+            <p>
+                Glass Shelf,Wooden,& Custom Shelf
+            </p>
+            <button onclick="openFurnitureBooking('Wall Shelf')">
+                Book Now
+            </button>
+         </div>
+
+
+
+        <!-- CUSTOM -->
+
+        <div class="furniture-card">
+
+            <div class="service-icon">
+                ✨
+            </div>
+
+            <h2>Custom Furniture</h2>
+
+            <p>
+                Design your furniture according to your needs
+            </p>
+
+            <button onclick="openFurnitureBooking('Custom Furniture')">
+                Book Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CUSTOM SERVICE ================= -->
+
+    <div class="custom-service">
+
+        <div>
+
+            <h2>
+                Don't see your required furniture service?
+            </h2>
+
+            <p>
+                Request a custom furniture service and we'll help you.
+            </p>
+
+        </div>
+
+        <button onclick="openFurnitureBooking('Custom Furniture Request')">
+            Request Now
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- ================= BOOKING POPUP ================= -->
+
+<div id="bookingPopup" class="booking-popup">
+
+    <div class="booking-box">
+
+        <button class="booking-close" onclick="closeBooking()">
+            ×
+        </button>
+
+        <h2>Book Furniture Service</h2>
+
+        <p id="selectedService"></p>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Your Name"
+        >
+
+        <input
+            type="tel"
+            id="customerMobile"
+            placeholder="Mobile Number"
+        >
+        <select id="furnitureType" required>
+            <option value="">Select Work Type</option>
+        </select>
+
+        <input
+            type="text"
+            id="customerAddress"
+            placeholder="Your Address"
+        >
+
+        <button class="confirm-btn" onclick="confirmBooking()">
+            Confirm Booking
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= SOCIAL MEDIA FOOTER ================= -->
+
+<footer class="social-footer">
+
+    <div class="social-container">
+
+        <h2>CONNECT WITH US</h2>
+
+        <p>
+            Follow us on social media for latest updates, designs and services.
+        </p>
+
+        <div class="social-icons">
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/YOUR_USERNAME"
+               target="_blank"
+               class="social instagram"
+               title="Instagram">
+                <span>◎</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/YOUR_USERNAME"
+               target="_blank"
+               class="social facebook"
+               title="Facebook">
+                <span>f</span>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@YOUR_CHANNEL"
+               target="_blank"
+               class="social youtube"
+               title="YouTube">
+                <span>▶</span>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/YOUR_USERNAME"
+               target="_blank"
+               class="social telegram"
+               title="Telegram">
+                <span>➤</span>
+            </a>
+
+            <!-- X / Twitter -->
+            <a href="https://x.com/YOUR_USERNAME"
+               target="_blank"
+               class="social twitter"
+               title="X">
+                <span>𝕏</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/YOUR_USERNAME"
+               target="_blank"
+               class="social linkedin"
+               title="LinkedIn">
+                <span>in</span>
+            </a>
+
+        </div>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 Baba Carpenter Furniture Services. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP CHAT ================= -->
+
+<a
+    href="https://wa.me/919920931142?text=Hello%20Home%20Workz%2C%20I%20want%20to%20book%20a%20window%20fitting%20service."
+    target="_blank"
+    class="whatsapp-chat"
+    title="Chat on WhatsApp">
+
+    <span class="whatsapp-icon">☏</span>
+
+    <span class="whatsapp-text">
+        Chat on WhatsApp
+    </span>
+
+</a>
+
+<script type="module" 
+ src="js/furniture.js"></script>
+
+</body>
+</html>

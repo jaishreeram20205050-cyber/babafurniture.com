@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Baba Carpenter- Door Fitting Services</title>
+
+    <link rel="stylesheet" href="css/door.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo-area">
+
+        <div class="door-logo">
+            <div class="door-logo-inner"></div>
+        </div>
+
+        <div class="logo-text">
+            <h2>BABA <span>CARPENTER</span></h2>
+            <p>DOOR FITTING SERVICES</p>
+        </div>
+
+    </div>
+
+
+    <nav class="nav-menu">
+
+        <a href="#home" class="active">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#why">WHY CHOOSE US</a>
+        <a href="#contact">CONTACT US</a>
+
+    </nav>
+
+
+    <button class="top-book" onclick="openBooking('General Door Fitting')">
+        BOOK NOW
+    </button>
+
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            DOOR FITTING
+            <span>SERVICES</span>
+        </h1>
+
+        <div class="orange-line"></div>
+
+        <p>
+            We provide professional door fitting services with
+            best quality materials and expert installation.
+        </p>
+
+        <button class="hero-btn" onclick="openBooking('Door Fitting Service')">
+
+            BOOK NOW
+
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="image/main wall.jpg"
+            alt="Door Fitting Service"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services-section" id="services">
+
+    <div class="section-title">
+
+        <span class="line"></span>
+
+        <h2>
+            OUR <span>DOOR FITTING</span> SERVICES
+        </h2>
+
+        <span class="line"></span>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <!-- 1 WOODEN DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/wooden door.jpg"
+                    alt="Wooden Door"
+                >
+
+            </div>
+
+            <div class="service-icon">▯</div>
+
+            <h3>Wooden Door</h3>
+
+            <button onclick="openBooking('Wooden Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 2 MAIN DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/main door (2).jpg"
+                    alt="Main Door"
+                >
+
+            </div>
+
+            <div class="service-icon">⌂</div>
+
+            <h3>Main Door</h3>
+
+            <button onclick="openBooking('Main Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 3 PVC DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/pvc door.jpg"
+                    alt="PVC Door"
+                >
+
+            </div>
+
+            <div class="service-icon">▯</div>
+
+            <h3>PVC Door</h3>
+
+            <button onclick="openBooking('PVC Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 4 UPVC DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/upvc door.jpg"
+                    alt="UPVC Door"
+                >
+
+            </div>
+
+            <div class="service-icon">▥</div>
+
+            <h3>UPVC Door</h3>
+
+            <button onclick="openBooking('UPVC Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 5 ALUMINIUM DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/aluminium door.jpg"
+                    alt="Aluminium Door"
+                >
+
+            </div>
+
+            <div class="service-icon">▯</div>
+
+            <h3>Aluminium Door</h3>
+
+            <button onclick="openBooking('Aluminium Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 6 GLASS DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/glass door.jpg"
+                    alt="Glass Door"
+                >
+
+            </div>
+
+            <div class="service-icon">▯</div>
+
+            <h3>Glass Door</h3>
+
+            <button onclick="openBooking('Glass Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 7 SLIDING DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/sliding door.jpg"
+                    alt="Sliding Door"
+                >
+
+            </div>
+
+            <div class="service-icon">↔</div>
+
+            <h3>Sliding Door</h3>
+
+            <button onclick="openBooking('Sliding Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 8 FOLDING DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/folding door.jpg"
+                    alt="Folding Door"
+                >
+
+            </div>
+
+            <div class="service-icon">▥</div>
+
+            <h3>Folding Door</h3>
+
+            <button onclick="openBooking('Folding Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 9 WPC DOOR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/Screenshot 2026-09-20 204406.jpg"
+                    alt="WPC Door"
+                >
+
+            </div>
+
+            <div class="service-icon">▯</div>
+
+            <h3>WPC Door</h3>
+
+            <button onclick="openBooking('WPC Door')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+        <!-- 10 REPAIR -->
+
+        <div class="service-card">
+
+            <div class="service-image">
+
+                <img
+                    src="image/door reaparing.jpg"
+                    alt="Door Repair"
+                >
+
+            </div>
+
+            <div class="service-icon">⚒</div>
+
+            <h3>Door Repair & Replacement</h3>
+
+            <button onclick="openBooking('Door Repair & Replacement')">
+                BOOK NOW
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features" id="why">
+
+    <div class="feature">
+
+        <div class="feature-icon">✓</div>
+
+        <div>
+
+            <h3>QUALITY MATERIALS</h3>
+
+            <p>
+                We use premium quality
+                materials for long life.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">♙</div>
+
+        <div>
+
+            <h3>EXPERT TEAM</h3>
+
+            <p>
+                Our experienced team ensures
+                perfect installation.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">♕</div>
+
+        <div>
+
+            <h3>SATISFACTION GUARANTEE</h3>
+
+            <p>
+                Your satisfaction is our
+                top priority.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">◷</div>
+
+        <div>
+
+            <h3>ON TIME SERVICE</h3>
+
+            <p>
+                We value your time and
+                deliver on time.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <span>ABOUT US</span>
+
+        <h2>
+            Professional Door
+            <strong>Fitting Services</strong>
+        </h2>
+
+        <p>
+            We provide high-quality door installation,
+            repair and replacement services for homes,
+            offices and commercial buildings.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h2>
+        NEED DOOR FITTING SERVICE?
+    </h2>
+
+    <p>
+        Contact us today for professional door fitting.
+    </p>
+
+    <button onclick="openBooking('General Door Fitting')">
+        BOOK NOW
+    </button>
+
+</section>
+
+
+<!-- ================= SOCIAL MEDIA ================= -->
+
+<footer class="social-footer" id="gallery">
+
+    <h2>CONNECT WITH US</h2>
+
+    <p>
+        Follow us for latest designs, updates and services.
+    </p>
+
+    <div class="social-icons">
+
+        <a href="https://www.instagram.com/YOUR_USERNAME"
+           target="_blank"
+           class="social instagram">
+            ◎
+        </a>
+
+        <a href="https://www.facebook.com/YOUR_USERNAME"
+           target="_blank"
+           class="social facebook">
+            f
+        </a>
+
+        <a href="https://www.youtube.com/@YOUR_CHANNEL"
+           target="_blank"
+           class="social youtube">
+            ▶
+        </a>
+
+        <a href="https://t.me/YOUR_USERNAME"
+           target="_blank"
+           class="social telegram">
+            ➤
+        </a>
+
+        <a href="https://x.com/YOUR_USERNAME"
+           target="_blank"
+           class="social twitter">
+            𝕏
+        </a>
+
+        <a href="https://www.linkedin.com/in/YOUR_USERNAME"
+           target="_blank"
+           class="social linkedin">
+            in
+        </a>
+
+    </div>
+
+    <div class="footer-line"></div>
+
+    <p class="copyright">
+        © 2026 Baba Carpenter Door Fitting Services.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    href="https://wa.me/919920931142?text=Hello%20Home%20Workz%2C%20I%20want%20to%20book%20a%20door%20fitting%20service."
+    target="_blank"
+    class="whatsapp-chat">
+
+    <span class="whatsapp-icon">☏</span>
+
+    <span class="whatsapp-text">
+        Chat on WhatsApp
+    </span>
+
+</a>
+
+
+<!-- ================= BOOKING POPUP ================= -->
+
+<div class="booking-overlay" id="bookingOverlay">
+
+    <div class="booking-box">
+
+        <button class="close-btn" onclick="closeBooking()">
+            ×
+        </button>
+
+        <h2>BOOK YOUR SERVICE</h2>
+
+        <p id="selectedService">
+            Door Fitting Service
+        </p>
+
+
+        <form id="bookingForm">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Mobile Number"
+                required
+            >
+
+            <input
+                type="text"
+                id="customerAddress"
+                placeholder="Your Address"
+                required
+            >
+
+            <input
+                type="date"
+                id="bookingDate"
+                required
+            >
+
+            <textarea
+                id="customerMessage"
+                rows="4"
+                placeholder="Describe your work..."
+            ></textarea>
+
+            <button type="submit">
+                CONFIRM BOOKING
+            </button>
+
+        </form>
+
+    </div>
+
+
+<script src="js/door.js"></script>
+
+</body>
+</html>

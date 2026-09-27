@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Baba Carpenter | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="brand">
+                <div class="brand-icon">⌂</div>
+
+                <div>
+                    <h2>Home<span>Workz</span></h2>
+                    <small>ADMIN PANEL</small>
+                </div>
+            </div>
+
+            <button class="close-menu" id="closeMenu">×</button>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item active" data-page="dashboard">
+                <span>▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="bookings">
+                <span>📋</span>
+                <span>Bookings</span>
+                <b class="menu-count">5</b>
+            </a>
+
+            <a href="#" class="menu-item" data-page="customers">
+                <span>👥</span>
+                <span>Customers</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="services">
+                <span>🛠️</span>
+                <span>Services</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="messages">
+                <span>💬</span>
+                <span>Messages</span>
+            </a>
+
+            <div class="menu-line"></div>
+
+            <a href="#" class="menu-item" data-page="settings">
+                <span>⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-mini">
+
+                <div class="admin-avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Super Admin</small>
+                </div>
+
+            </div>
+
+
+            <button class="logout-button" id="logoutButton">
+                <span>↪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button
+                class="menu-button"
+                id="openMenu"
+            >
+                ☰
+            </button>
+
+
+            <div class="page-title">
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome back, Administrator 👋
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="notification" id="notificationButton">
+                    🔔
+                    <span>0</span>
+                </button>
+
+
+                <div class="top-profile">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Admin</strong>
+                        <small>Administrator</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+
+            <!-- STAT CARDS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        👥
+                    </div>
+
+                    <div class="stat-data">
+
+                        <span>Total Customers</span>
+
+                        <h2 id="totalCustomers">
+                            0
+                        </h2>
+
+                        <small class="positive">
+                            ↑ 12.5% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        📋
+                    </div>
+
+                    <div class="stat-data">
+
+                        <span>Total Bookings</span>
+
+                        <h2 id="totalBookings">
+                            0
+                        </h2>
+
+                        <small class="positive">
+                            ↑ 8.4% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ⏳
+                    </div>
+
+                    <div class="stat-data">
+
+                        <span>Pending Bookings</span>
+
+                        <h2 id="pendingBookings">
+                            0
+                        </h2>
+
+                        <small class="warning">
+                            Need attention
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div class="stat-data">
+
+                        <span>Completed Work</span>
+
+                        <h2 id="completedWork">
+                            0
+                        </h2>
+
+                        <small class="positive">
+                            ↑ 15.2% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECOND ROW -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- BOOKINGS -->
+
+                <div class="panel bookings-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h2>Recent Bookings</h2>
+                            <p>Latest customer requests</p>
+                        </div>
+
+                        <button
+                            class="view-all"
+                            id="viewBookings"
+                        >
+                            View All →
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="bookingTable">
+                                <tr>
+                                    <td colspan="6"
+                                    style="text-align:center;">
+                                Loading booking
+                            </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="panel quick-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Manage your business</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <button class="quick-action">
+                            <span>➕</span>
+                            <div>
+                                <strong>Add Service</strong>
+                                <small>Create a new service</small>
+                            </div>
+                            <b>→</b>
+                        </button>
+
+
+                        <button class="quick-action">
+                            <span>👥</span>
+                            <div>
+                                <strong>Customers</strong>
+                                <small>View all customers</small>
+                            </div>
+                            <b>→</b>
+                        </button>
+
+
+                        <button class="quick-action">
+                            <span>📋</span>
+                            <div>
+                                <strong>Bookings</strong>
+                                <small>Manage bookings</small>
+                            </div>
+                            <b>→</b>
+                        </button>
+
+
+                        <button class="quick-action">
+                            <span>💬</span>
+                            <div>
+                                <strong>Messages</strong>
+                                <small>Customer messages</small>
+                            </div>
+                            <b>→</b>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMERS SECTION -->
+
+            <div class="panel customers-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>Customers</h2>
+
+                        <p>
+                            Recently registered customers
+                        </p>
+                    </div>
+
+                    <button
+                        class="view-all"
+                        id="viewCustomers"
+                    >
+                        View All →
+                    </button>
+
+                </div>
+
+
+                <div id="customersList">
+
+                    <p>
+                        Loading customers...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM ROW -->
+
+            <div class="bottom-grid">
+        
+                <!-- SERVICES -->
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h2>Popular Services</h2>
+                            <p>Most booked services</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="service-list">
+
+                        <div class="service-row">
+
+                            <div class="service-number">
+                                01
+                            </div>
+
+                            <div class="service-info">
+
+                                <strong>False Ceiling</strong>
+
+                                <div class="progress-bar">
+                                    <span style="width:82%"></span>
+                                </div>
+
+                            </div>
+
+                            <strong>82</strong>
+
+                        </div>
+
+
+                        <div class="service-row">
+
+                            <div class="service-number">
+                                02
+                            </div>
+
+                            <div class="service-info">
+
+                                <strong>PVC Panel</strong>
+
+                                <div class="progress-bar">
+                                    <span style="width:68%"></span>
+                                </div>
+
+                            </div>
+
+                            <strong>68</strong>
+
+                        </div>
+
+
+                        <div class="service-row">
+
+                            <div class="service-number">
+                                03
+                            </div>
+
+                            <div class="service-info">
+
+                                <strong>Wardrobe</strong>
+
+                                <div class="progress-bar">
+                                    <span style="width:55%"></span>
+                                </div>
+
+                            </div>
+
+                            <strong>55</strong>
+
+                        </div>
+
+
+                        <div class="service-row">
+
+                            <div class="service-number">
+                                04
+                            </div>
+
+                            <div class="service-info">
+
+                                <strong>Wooden Door</strong>
+
+                                <div class="progress-bar">
+                                    <span style="width:44%"></span>
+                                </div>
+
+                            </div>
+
+                            <strong>44</strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TODAY -->
+
+                <div class="panel today-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h2>Today's Overview</h2>
+                            <p>22 August 2026</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="today-number">
+                        12
+                    </div>
+
+                    <p class="today-label">
+                        New bookings today
+                    </p>
+
+
+                    <div class="today-stats">
+
+                        <div>
+                            <strong>7</strong>
+                            <span>Confirmed</span>
+                        </div>
+
+                        <div>
+                            <strong>3</strong>
+                            <span>Pending</span>
+                        </div>
+
+                        <div>
+                            <strong>2</strong>
+                            <span>Completed</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- NOTIFICATION POPUP -->
+
+<div
+    class="notification-box"
+    id="notificationBox"
+>
+
+    <div class="notification-title">
+        <strong>Notifications</strong>
+        <button id="closeNotification">×</button>
+    </div>
+
+    <div class="notification-item">
+        <span>📋</span>
+        <div>
+            <strong>New Booking</strong>
+            <small>Rahul booked False Ceiling</small>
+        </div>
+    </div>
+
+    <div class="notification-item">
+        <span>👤</span>
+        <div>
+            <strong>New Customer</strong>
+            <small>A new customer registered</small>
+        </div>
+    </div>
+
+    <div class="notification-item">
+        <span>💬</span>
+        <div>
+            <strong>New Message</strong>
+            <small>You have a new message</small>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="module"
+ src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

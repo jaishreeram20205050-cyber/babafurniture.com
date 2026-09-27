@@ -1,0 +1,1029 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fa;
+    color: #172033;
+}
+
+
+/* ================= HEADER ================= */
+
+.furniture-header {
+    background: #ffffff;
+    min-height: 110px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 6%;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: relative;
+}
+
+
+.back-area {
+    position: absolute;
+    left: 6%;
+}
+
+
+.back-area button {
+    border: none;
+    background: transparent;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+
+.back-area button:hover {
+    color: #ff7a00;
+}
+
+
+.page-title {
+    width: 100%;
+    text-align: center;
+}
+
+
+.page-title h1 {
+    font-size: 32px;
+    color: #0b2d5c;
+}
+
+
+.page-title p {
+    margin-top: 7px;
+    color: #777;
+}
+
+
+/* ================= PAGE ================= */
+
+.furniture-page {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: 30px auto 60px;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    width: 100%;
+
+    background: white;
+
+    border: 1px solid #e4e7eb;
+
+    border-radius: 15px;
+
+    padding: 17px 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.03);
+}
+
+
+.search-box span {
+    font-size: 22px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 17px;
+
+    background: transparent;
+}
+
+
+/* ================= GRID ================= */
+
+.furniture-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ================= CARD ================= */
+
+.furniture-card {
+
+    background: white;
+
+    border: 1px solid #e7e9ed;
+
+    border-radius: 16px;
+
+    padding: 25px 18px;
+
+    text-align: center;
+
+    min-height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: .25s ease;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.03);
+}
+
+
+.furniture-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.10);
+
+    border-color: #ffb066;
+}
+
+
+/* ================= ICON ================= */
+
+.service-icon {
+
+    width: 270px;
+    height: 190px;
+    overflow:hidden;
+    display: flex;
+    border-radius:8px;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    margin-bottom:0 auto 20px;
+}
+.service-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* ================= TEXT ================= */
+
+.furniture-card h2 {
+
+    font-size: 20px;
+
+    color: #172033;
+
+    margin-bottom: 10px;
+}
+
+
+.furniture-card p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 21px;
+
+    min-height: 43px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.furniture-card button {
+
+    width: 90%;
+
+    margin-top: auto;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ff7a00;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.furniture-card button:hover {
+
+    background: #e96800;
+
+    transform: scale(1.02);
+}
+
+
+/* ================= CUSTOM SERVICE ================= */
+
+.custom-service {
+
+    margin-top: 35px;
+
+    background: white;
+
+    border: 1px solid #e7e9ed;
+
+    border-radius: 16px;
+
+    padding: 28px 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.03);
+}
+
+
+.custom-service h2 {
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+
+.custom-service p {
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+.custom-service button {
+
+    background: #ff7a00;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 15px 35px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.custom-service button:hover {
+
+    background: #e96800;
+}
+
+
+/* ================= BOOKING POPUP ================= */
+
+.booking-popup {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.65);
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+
+.booking-box {
+
+    width: 420px;
+
+    max-width: 90%;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+
+
+.booking-box h2 {
+
+    text-align: center;
+
+    color: #0b2d5c;
+
+    margin-bottom: 10px;
+}
+
+
+#selectedService {
+
+    text-align: center;
+
+    color: #ff7a00;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.booking-box input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.confirm-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background: #ff7a00;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.booking-close {
+
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width: 1000px) {
+
+    .furniture-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 700px) {
+
+    .furniture-header {
+        padding: 20px;
+    }
+
+    .back-area {
+        position: static;
+    }
+
+    .page-title h1 {
+        font-size: 24px;
+    }
+
+    .furniture-page {
+        width: 92%;
+    }
+
+    .furniture-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .furniture-card {
+        padding: 18px 10px;
+        min-height: 250px;
+    }
+
+    .service-icon {
+        font-size: 45px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .furniture-card h2 {
+        font-size: 16px;
+    }
+
+    .furniture-card p {
+        font-size: 12px;
+    }
+
+    .custom-service {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .custom-service button {
+        width: 100%;
+    }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width: 430px) {
+
+    .furniture-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .furniture-card button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+}
+.booking-box select {
+    width:100%;
+    padding: 14px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:14px;
+    background:white;
+    color:#5c5b5b;
+    outline:none;
+}
+.booking-box select:focus{
+    border-color:#ff7a00;
+}
+/* ================= SOCIAL MEDIA FOOTER ================= */
+
+.social-footer {
+    background: #020f20;
+    color: white;
+
+    padding: 55px 20px 25px;
+
+    text-align: center;
+}
+
+
+.social-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.social-container h2 {
+    font-size: 27px;
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+
+.social-container > p {
+    color: #bfc9d6;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-icons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.social {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+
+.social:hover {
+    transform: translateY(-6px) scale(1.08);
+}
+
+
+/* INSTAGRAM */
+
+.instagram {
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+}
+
+
+/* FACEBOOK */
+
+.facebook {
+    background: #1877f2;
+
+    font-family: Arial;
+    font-weight: bold;
+}
+
+
+/* YOUTUBE */
+
+.youtube {
+    background: #ff0000;
+
+    font-size: 18px;
+}
+
+
+/* TELEGRAM */
+
+.telegram {
+    background: #229ed9;
+
+    font-size: 20px;
+}
+
+
+/* X */
+
+.twitter {
+    background: #000000;
+
+    font-size: 19px;
+}
+
+
+/* LINKEDIN */
+
+.linkedin {
+    background: #0a66c2;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.footer-line {
+    height: 1px;
+
+    background: rgba(255,255,255,0.18);
+
+    margin: 35px 0 20px;
+}
+
+
+.copyright {
+    color: #8e9aaa;
+
+    font-size: 12px;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-chat {
+
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 3000;
+
+    height: 58px;
+
+    padding: 0 20px;
+
+    border-radius: 35px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+
+    animation: whatsappPulse 2s infinite;
+}
+
+
+.whatsapp-chat:hover {
+
+    background: #1ebe5d;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.3);
+}
+
+
+.whatsapp-icon {
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #25D366;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+.whatsapp-text {
+    white-space: nowrap;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0.5);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px rgba(37,211,102,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0);
+    }
+
+}
+
+
+/* ================= SOCIAL MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .social-footer {
+        padding: 40px 15px 25px;
+    }
+
+
+    .social-container h2 {
+        font-size: 22px;
+    }
+
+
+    .social-container > p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    .social {
+        width: 43px;
+        height: 43px;
+
+        font-size: 19px;
+    }
+
+
+    .whatsapp-chat {
+
+        right: 15px;
+        bottom: 15px;
+
+        width: 58px;
+        height: 58px;
+
+        padding: 0;
+
+        border-radius: 50%;
+
+        justify-content: center;
+    }
+
+
+    .whatsapp-text {
+        display: none;
+    }
+
+
+    .whatsapp-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 25px;
+    }
+
+}
+/* =====================================================
+   BOOKING SUCCESS POPUP
+===================================================== */
+
+.booking-success-popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999999;
+
+    background: rgba(10, 20, 45, 0.70);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+.booking-success-box {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.3);
+
+}
+
+
+.success-close {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 12px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f2f5;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+.success-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: #e5f8ec;
+
+    color: #16a34a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+}
+
+
+.booking-success-box h2 {
+
+    color: #17213f;
+
+    margin: 5px 0 10px;
+
+}
+
+
+.booking-success-box p {
+
+    color: #737b8f;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.booking-id-box {
+
+    background: #f5f6fa;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    margin: 18px 0;
+
+}
+
+
+.booking-id-box span {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #777;
+
+}
+
+
+.booking-id-box strong {
+
+    display: block;
+
+    color: #ff7518;
+
+    font-size: 18px;
+
+    margin-top: 5px;
+
+}
+
+
+.success-done {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 13px;
+
+    background: #ff7518;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}

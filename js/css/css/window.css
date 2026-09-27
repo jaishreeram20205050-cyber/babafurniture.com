@@ -1,0 +1,1237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #0b1b33;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+    background: #03172d;
+
+    display: flex;
+    align-items: center;
+    padding: 0 4.5%;
+
+    gap: 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.back-area {
+    position: absolute;
+    left: 6%;
+}
+
+
+.back-area button {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #fffbfb;
+
+    cursor: pointer;
+}
+
+
+.back-area button:hover {
+    color: #ff7a00;
+}
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    min-width: 270px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+
+    border: 3px solid white;
+    border-radius: 50% 50% 0 0;
+
+    margin-right: 13px;
+
+    position: relative;
+}
+
+.logo-icon span:nth-child(1) {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: white;
+    left: 50%;
+}
+
+.logo-icon span:nth-child(2) {
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: white;
+    left: 24%;
+    top: 2px;
+    transform: rotate(45deg);
+}
+
+.logo-icon span:nth-child(3) {
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: white;
+    right: 24%;
+    top: 2px;
+    transform: rotate(-45deg);
+}
+
+
+.logo-text h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo-text h2 span {
+    color: #1687ff;
+}
+
+.logo-text p {
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 1px;
+}
+
+
+/* NAV MENU */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+    flex: 1;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #1687ff;
+}
+
+
+/* TOP BOOK BUTTON */
+
+.top-book {
+    border: none;
+    background: #087cf5;
+    color: white;
+
+    padding: 13px 27px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.top-book:hover {
+    background: #0564c8;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-btn {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 300px;
+
+    display: flex;
+    align-items: stretch;
+
+    background: #f4f5f6;
+}
+
+.hero-content {
+    width: 52%;
+
+    padding: 45px 0 35px 12%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background: #f8f8f8;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 4vw, 62px);
+
+    line-height: 1.02;
+
+    font-weight: 800;
+
+    color: #0b1b33;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #087cf5;
+}
+
+.blue-line {
+    width: 80px;
+    height: 3px;
+
+    background: #087cf5;
+
+    margin: 16px 0;
+}
+
+.hero-content p {
+    max-width: 570px;
+
+    color: #1e2d42;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    width: 178px;
+
+    border: none;
+
+    background: #087cf5;
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero-btn span {
+    margin-left: 12px;
+    font-size: 19px;
+}
+
+.hero-btn:hover {
+    background: #0565ca;
+    transform: translateY(-2px);
+}
+
+
+.hero-image {
+    width: 48%;
+
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services-section {
+    padding: 18px 3.3% 20px;
+    background: #ffffff;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 17px;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+.section-title h2 span {
+    color: #087cf5;
+}
+
+.line {
+    width: 55px;
+    height: 2px;
+    background: #087cf5;
+
+    position: relative;
+}
+
+.line::after {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    background: #087cf5;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.line:first-child::after {
+    right: -1px;
+}
+
+.line:last-child::after {
+    left: -1px;
+}
+
+
+/* SERVICE GRID */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+
+/* SERVICE CARD */
+
+.service-card {
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 7px 7px 12px;
+
+    text-align: center;
+
+    position: relative;
+
+    border: 1px solid #e4e4e4;
+
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.11);
+
+    transition: 0.3s;
+
+    min-height: 232px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* SERVICE IMAGE */
+
+.service-image {
+    width: 100%;
+    height: 135px;
+
+    overflow: hidden;
+
+    border-radius: 7px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.06);
+}
+
+
+/* ICON */
+
+.service-icon {
+    width: 43px;
+    height: 43px;
+
+    background: #087cf5;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin: -22px auto 4px;
+
+    position: relative;
+
+    border: 3px solid white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+
+.service-card h3 {
+    font-size: 15px;
+
+    line-height: 1.25;
+
+    min-height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0b1b33;
+
+    margin: 2px 2px 7px;
+
+    font-weight: 700;
+}
+
+
+.service-card button {
+    border: none;
+
+    background: #087cf5;
+
+    color: white;
+
+    padding: 7px 28px;
+
+    min-width: 140px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.service-card button:hover {
+    background: #0564c8;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    background: #03172d;
+
+    min-height: 110px;
+
+    padding: 20px 7%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: white;
+
+    padding-right: 20px;
+
+    border-right: 1px solid rgba(255,255,255,0.6);
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.feature h3 {
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.feature p {
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #e5eaf1;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 80px 10%;
+
+    background: #f7f9fc;
+
+    text-align: center;
+}
+
+.about-content > span {
+    color: #087cf5;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.about h2 {
+    font-size: 40px;
+
+    margin: 12px 0;
+}
+
+.about h2 strong {
+    color: #087cf5;
+}
+
+.about p {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #586477;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: white;
+}
+
+.contact h2 {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.contact p {
+    color: #667085;
+
+    margin-bottom: 22px;
+}
+
+.contact button {
+    background: #087cf5;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 35px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ================= BOOKING POPUP ================= */
+
+.booking-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.68);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 5000;
+}
+
+.booking-overlay.show {
+    display: flex;
+}
+
+
+.booking-box {
+    width: 430px;
+
+    max-width: 100%;
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    position: relative;
+
+    animation: popup 0.25s ease;
+}
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+.close-btn {
+    position: absolute;
+
+    right: 15px;
+    top: 12px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+
+.booking-box h2 {
+    color: #0b1b33;
+
+    font-size: 23px;
+
+    margin-bottom: 5px;
+}
+
+#selectedService {
+    color: #087cf5;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+.booking-box input,
+.booking-box textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #d7dce2;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.booking-box input:focus,
+.booking-box textarea:focus {
+    border-color: #087cf5;
+}
+
+
+.booking-box form button {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #087cf5;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 1100px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .logo-area {
+        min-width: auto;
+    }
+
+    .logo-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .logo-text h2 {
+        font-size: 17px;
+    }
+
+    .logo-text p {
+        font-size: 8px;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 65px;
+
+        background: #03172d;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .top-book {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+
+        margin-left: auto;
+    }
+
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        padding: 45px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        height: 300px;
+    }
+
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature {
+        border-right: none;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .section-title h2 {
+        font-size: 19px;
+    }
+
+    .section-title .line {
+        width: 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 260px;
+    }
+
+    .service-image {
+        height: 170px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+
+        padding: 30px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+}
+/* ================= SOCIAL MEDIA FOOTER ================= */
+
+.social-footer {
+    background: #020f20;
+    color: white;
+
+    padding: 55px 20px 25px;
+
+    text-align: center;
+}
+
+
+.social-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.social-container h2 {
+    font-size: 27px;
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+
+.social-container > p {
+    color: #bfc9d6;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-icons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.social {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+
+.social:hover {
+    transform: translateY(-6px) scale(1.08);
+}
+
+
+/* INSTAGRAM */
+
+.instagram {
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+}
+
+
+/* FACEBOOK */
+
+.facebook {
+    background: #1877f2;
+
+    font-family: Arial;
+    font-weight: bold;
+}
+
+
+/* YOUTUBE */
+
+.youtube {
+    background: #ff0000;
+
+    font-size: 18px;
+}
+
+
+/* TELEGRAM */
+
+.telegram {
+    background: #229ed9;
+
+    font-size: 20px;
+}
+
+
+/* X */
+
+.twitter {
+    background: #000000;
+
+    font-size: 19px;
+}
+
+
+/* LINKEDIN */
+
+.linkedin {
+    background: #0a66c2;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.footer-line {
+    height: 1px;
+
+    background: rgba(255,255,255,0.18);
+
+    margin: 35px 0 20px;
+}
+
+
+.copyright {
+    color: #8e9aaa;
+
+    font-size: 12px;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-chat {
+
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 3000;
+
+    height: 58px;
+
+    padding: 0 20px;
+
+    border-radius: 35px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+
+    animation: whatsappPulse 2s infinite;
+}
+
+
+.whatsapp-chat:hover {
+
+    background: #1ebe5d;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.3);
+}
+
+
+.whatsapp-icon {
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #25D366;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+.whatsapp-text {
+    white-space: nowrap;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0.5);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px rgba(37,211,102,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0);
+    }
+
+}
+
+
+/* ================= SOCIAL MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .social-footer {
+        padding: 40px 15px 25px;
+    }
+
+
+    .social-container h2 {
+        font-size: 22px;
+    }
+
+
+    .social-container > p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    .social {
+        width: 43px;
+        height: 43px;
+
+        font-size: 19px;
+    }
+
+
+    .whatsapp-chat {
+
+        right: 15px;
+        bottom: 15px;
+
+        width: 58px;
+        height: 58px;
+
+        padding: 0;
+
+        border-radius: 50%;
+
+        justify-content: center;
+    }
+
+
+    .whatsapp-text {
+        display: none;
+    }
+
+
+    .whatsapp-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 25px;
+    }
+
+}
